@@ -13,4 +13,6 @@ RUN INSTALL_PKGS="tar unzip nginx" && \
 
 COPY s2i /usr/libexec/s2i/
 
+USER 0
+
 CMD ["usage"]
