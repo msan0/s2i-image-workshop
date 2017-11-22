@@ -15,4 +15,4 @@ COPY s2i /usr/libexec/s2i/
 
 USER 0
 
-CMD ["usage"]
+CMD ["sh", "-c", "/usr/libexec/s2i/usage"]
