@@ -1,2 +1,3 @@
 FROM openshift/httpd
-COPY website/* /var/www
+COPY website/index.html /var/www
+COPY website/styles.css /var/www
