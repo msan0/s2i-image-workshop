@@ -1,0 +1,3 @@
+echo "The wrapper script!"
+
+/usr/libexec/s2i/run
