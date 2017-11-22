@@ -18,6 +18,12 @@ RUN INSTALL_PKGS="tar unzip nginx" && \
 
 COPY s2i /usr/libexec/s2i/
 COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./fix-permissions /usr/local/bin/
+
+RUN fix-permissions /opt/app-root
+RUN fix-permissions /var/log
+RUN fix-permissions /var/lib/nginx
+RUN fix-permissions /run
 
 USER 1001
 
