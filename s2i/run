@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "Running!"
-/bin/bash -ti
+tail -f /dev/null
