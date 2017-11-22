@@ -5,7 +5,7 @@ MAINTAINER Oliver Weise <oliver.weise@consol.de>
 LABEL io.k8s.description="An NGINX builder image" \
     io.k8s.display-name="NGINX Builder Image" \
     io.openshift.s2i.scripts-url="image:///usr/libexec/s2i" \
-    io.openshift.tags=builder,nginx
+    io.openshift.tags="builder,nginx"
 
 RUN INSTALL_PKGS="tar unzip nginx" && \
     yum install -y $INSTALL_PKGS && \
