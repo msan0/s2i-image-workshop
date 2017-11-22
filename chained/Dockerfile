@@ -1,2 +1,2 @@
 FROM openshift/httpd
-COPY website /var/www
+COPY website/* /var/www
