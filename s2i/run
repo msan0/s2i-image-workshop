@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "Running!"
-/bin/sh -i
+/bin/bash -ti
