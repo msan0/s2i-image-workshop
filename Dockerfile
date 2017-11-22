@@ -1,4 +1,4 @@
-FROM centos:7
+FROM openshift/base-centos7
 
 MAINTAINER Oliver Weise <oliver.weise@consol.de>
 
