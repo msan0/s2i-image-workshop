@@ -8,6 +8,9 @@ LABEL io.k8s.description="An NGINX builder image" \
     io.openshift.tags="builder,nginx" \
     io.openshift.expose-services="8080:http"
 
+RUN yum install -y epel-release && \
+    yum makecache fast
+
 RUN INSTALL_PKGS="tar unzip nginx" && \
     yum install -y $INSTALL_PKGS && \
     yum clean all && \
