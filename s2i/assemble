@@ -3,3 +3,6 @@
 echo "Assembling!"
 mkdir -p /opt/app-root/www
 cp -Rf /tmp/src/. /opt/app-root/www
+cd /opt/app-root/www
+npm install
+node_modules/node-sass/bin/node-sass styles.scss

@@ -11,7 +11,7 @@ LABEL io.k8s.description="An NGINX builder image" \
 RUN yum install -y epel-release && \
     yum makecache fast
 
-RUN INSTALL_PKGS="tar unzip nginx" && \
+RUN INSTALL_PKGS="tar unzip nginx nodejs" && \
     yum install -y $INSTALL_PKGS && \
     yum clean all && \
     rm -rf /var/cache/yum

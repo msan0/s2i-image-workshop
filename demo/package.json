@@ -1,0 +1,13 @@
+{
+  "name": "s2i-image-workshop-demo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+    "node-sass": "4.7.2"
+  }
+}
