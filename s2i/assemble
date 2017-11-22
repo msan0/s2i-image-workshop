@@ -6,6 +6,7 @@ cp -Rf /tmp/src/. /opt/app-root/www
 cd /opt/app-root/www
 
 if [ "$(ls /tmp/artifacts/node_modules 2>/dev/null)" ]; then
+    echo "Restoring node modules"
     mv /tmp/artifacts/node_modules .
 fi
 
