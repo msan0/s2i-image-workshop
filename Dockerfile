@@ -15,5 +15,4 @@ COPY s2i /usr/libexec/s2i/
 
 USER 1001
 
-ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["/usr/libexec/s2i/usage"]
