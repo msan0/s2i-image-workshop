@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "Running!"
-/usr/bin/run-httpd
+apachectl -D FOREGROUND & sleep 30 && curl -i localhost
