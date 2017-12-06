@@ -1,4 +1,4 @@
-FROM openshift/base-centos7
+FROM registry.access.redhat.com/rhel7.4
 
 MAINTAINER Oliver Weise <oliver.weise@consol.de>
 
@@ -8,10 +8,7 @@ LABEL io.k8s.description="An NGINX builder image" \
     io.openshift.tags="builder,nginx" \
     io.openshift.expose-services="8080:http"
 
-RUN yum install -y epel-release && \
-    yum makecache fast
-
-RUN INSTALL_PKGS="tar unzip nginx nodejs" && \
+RUN INSTALL_PKGS="tar unzip httpd nodejs" && \
     yum install -y $INSTALL_PKGS && \
     yum clean all && \
     rm -rf /var/cache/yum
