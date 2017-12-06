@@ -8,7 +8,7 @@ LABEL io.k8s.description="An NGINX builder image" \
     io.openshift.tags="builder,nginx" \
     io.openshift.expose-services="8080:http"
 
-RUN INSTALL_PKGS="tar unzip httpd nodejs" && \
+RUN INSTALL_PKGS="tar unzip httpd" && \
     yum install -y $INSTALL_PKGS && \
     yum clean all && \
     rm -rf /var/cache/yum
