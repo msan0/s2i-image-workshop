@@ -19,7 +19,7 @@ COPY ./fix-permissions /usr/local/bin/
 
 RUN fix-permissions /opt/app-root
 RUN fix-permissions /var/log
-RUN fix-permissions /var/lib/nginx
+RUN fix-permissions /var/www/html
 RUN fix-permissions /run
 
 USER 1001
