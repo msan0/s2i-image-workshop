@@ -4,6 +4,7 @@
 # be surpressed.  Otherwise, the tar stream will be corrupted.
 pushd ${HOME} >/dev/null
 if [ -d /opt/app-root/src/passwords ]; then
-    tar cf - /opt/app-root/src/passwords
+    cd /opt/app-root/src
+    tar cf - passwords
 fi
 popd >/dev/null
