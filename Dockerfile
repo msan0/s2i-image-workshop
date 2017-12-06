@@ -14,7 +14,7 @@ RUN INSTALL_PKGS="tar unzip httpd nodejs" && \
     rm -rf /var/cache/yum
 
 COPY s2i /usr/libexec/s2i/
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./httpd.conf /etc/httpd/conf/httpd.conf
 COPY ./fix-permissions /usr/local/bin/
 
 RUN fix-permissions /opt/app-root
