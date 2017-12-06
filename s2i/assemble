@@ -10,8 +10,3 @@ if [ "$(ls /tmp/artifacts/node_modules 2>/dev/null)" ]; then
     mv /tmp/artifacts/node_modules .
     chgrp root node_modules
 fi
-
-echo "NO_PROXY: ${NO_PROXY}"
-
-npm install
-node_modules/node-sass/bin/node-sass styles.scss > styles.css
