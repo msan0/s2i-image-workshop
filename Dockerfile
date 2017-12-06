@@ -6,10 +6,7 @@ LABEL io.k8s.description="An NGINX builder image" \
     io.k8s.display-name="NGINX Builder Image" \
     io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 
-RUN yum install -y epel-release && \
-    yum makecache fast
-
-RUN INSTALL_PKGS="tar unzip nginx" && \
+RUN INSTALL_PKGS="tar unzip nginx httpd" && \
     yum install -y $INSTALL_PKGS && \
     yum clean all && \
     rm -rf /var/cache/yum
