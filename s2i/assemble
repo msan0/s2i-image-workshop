@@ -5,11 +5,12 @@ mkdir -p /opt/app-root/www
 cp -Rf /tmp/src/. /opt/app-root/www
 cd /opt/app-root/www
 
-if [ "$(ls /tmp/artifacts/password 2>/dev/null)" ]; then
-    mv /tmp/artifacts/password /opt/app-root/src/password
-    chgrp root /opt/app-root/src/password
-    echo "Restored password $(cat /opt/app-root/src/password)"
+if [ "$(ls /tmp/artifacts/passwords 2>/dev/null)" ]; then
+    mv /tmp/artifacts/passwords /opt/app-root/src
+    chgrp -R root /opt/app-root/src/passwords
+    echo "Restored password $(cat /opt/app-root/src/passwords/pwd1)"
 else
-    date | md5sum > /opt/app-root/src/password
-    echo "Generated password $(cat /opt/app-root/src/password)"
+    mkdir /opt/app-root/src/passwords
+    date | md5sum > /opt/app-root/src/passwords/pwd1
+    echo "Generated password $(cat /opt/app-root/src/passwords/pwd1)"
 fi
