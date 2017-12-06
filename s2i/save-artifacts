@@ -3,9 +3,8 @@
 # Besides the tar command, all other output to standard out must
 # be surpressed.  Otherwise, the tar stream will be corrupted.
 pushd ${HOME} >/dev/null
-if [ -d /opt/app-root/www/node_modules ]; then
-    # all deps contents to tar stream
-    cd /opt/app-root/www/
-    tar cf - node_modules
+if [ -d /opt/app-root/src/password ]; then
+    cd /opt/app-root/src/
+    tar cf - password
 fi
 popd >/dev/null
