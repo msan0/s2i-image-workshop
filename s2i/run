@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "Running!"
-apachectl -D FOREGROUND & sleep 30 && curl -i localhost
+apachectl -D FOREGROUND & sleep 30 && curl -i localhost:8080
