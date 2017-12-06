@@ -3,7 +3,7 @@
 # Besides the tar command, all other output to standard out must
 # be surpressed.  Otherwise, the tar stream will be corrupted.
 pushd ${HOME} >/dev/null
-if [ -d /opt/app-root/src/passwords/pwd1 ]; then
+if [ -d /opt/app-root/src/passwords ]; then
     tar cf - /opt/app-root/src/passwords
 fi
 popd >/dev/null
