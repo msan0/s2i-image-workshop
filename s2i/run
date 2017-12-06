@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "Running!"
-nginx -g "daemon off;"
+/usr/bin/run-httpd
