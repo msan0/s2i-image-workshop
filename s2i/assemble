@@ -5,7 +5,13 @@ echo "Assembling!"
 mkdir -p /opt/app-root/www
 cp -Rf /tmp/src/. /opt/app-root/www
 
-mkdir /opt/app-root/src/passwords
-date | md5sum > /opt/app-root/src/passwords/pwd1
-echo "Generated password $(cat /opt/app-root/src/passwords/pwd1)"
+if [ "$(ls /tmp/artifacts/passwords 2>/dev/null)" ]; then
+    mv /tmp/artifacts/passwords /opt/app-root/src
+    chgrp -R root /opt/app-root/src/passwords
+    echo "Restored password $(cat /opt/app-root/src/passwords/pwd1)"
+else
+    mkdir /opt/app-root/src/passwords
+    date | md5sum > /opt/app-root/src/passwords/pwd1
+    echo "Generated password $(cat /opt/app-root/src/passwords/pwd1)"
+fi
 
