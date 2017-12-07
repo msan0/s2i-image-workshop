@@ -2,3 +2,6 @@
 
 echo "Assembling!"
 
+mkdir -p /opt/app-root/www
+cp -Rf /tmp/src/. /opt/app-root/www
+
