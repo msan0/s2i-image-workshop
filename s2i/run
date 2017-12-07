@@ -1,5 +1,4 @@
 #!/bin/sh
 
 echo "Running!"
-apachectl -D FOREGROUND
 tail -f /dev/null
